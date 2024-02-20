@@ -27,7 +27,7 @@ resource "aws_subnet" "public_subnet" {
   cidr_block = var.public_subnet[count.index]
 
   tags = {
-    Name = "public_subnet"
+    Name = "public_subnet_${count.index + 1}"
   }
 }
 
@@ -38,6 +38,6 @@ resource "aws_subnet" "private_subnet" {
   availability_zone = random_shuffle.az.result[count.index]
 
   tags = {
-    Name = "private_subnet"
+    Name = "private_subnet_${count.index +1}"
   }
 }
