@@ -1,9 +1,9 @@
 terraform {
   cloud {
-    organization = "my-organization-by-ytechnologies"
+    organization = "thihathura"
 
     workspaces {
-      name = "more-than-certified-workspace"
+      name = "aws-workspace"
     }
   }
 }
