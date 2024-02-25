@@ -3,20 +3,6 @@
 #   type = string
 # }
 
-variable "aws_region" {
-  type = string
-}
-
-variable "access_key" {
-  type = string
-  sensitive = true
-}
-
-variable "secret_key" {
-  type = string
-  sensitive = true
-}
-
 variable "allocated_storage" {
   type = number
 }
@@ -35,18 +21,24 @@ variable "instance_class" {
 
 variable "username" {
   type = string
-  sensitive = true
 }
 
 variable "password" {
   type = string
-  sensitive = true
 }
 
 variable "parameter_group_name" {
-  type = string
+    type = string
 }
 
 variable "skip_final_snapshot" {
-  type = bool
+    type = bool
+}
+
+variable "security_group_id" {
+    type = list
+}
+
+variable "db_subnet_group_name" {
+       type = string
 }
